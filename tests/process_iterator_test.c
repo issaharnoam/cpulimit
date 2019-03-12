@@ -32,9 +32,13 @@
 #include <libgen.h>
 #endif
 
+#ifdef VS_CPULIMIT
+#include "../src/process_iterator.h"
+#include "../src/process_group.h"
+#else
 #include <process_iterator.h>
 #include <process_group.h>
-
+#endif 
 volatile sig_atomic_t child;
 
 void kill_child(int sig)

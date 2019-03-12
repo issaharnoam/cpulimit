@@ -29,7 +29,7 @@
 #include "process_iterator.h"
 
 //See this link to port to other systems: http://www.steve.org.uk/Reference/Unix/faq_8.html#SEC85
-
+#ifndef VS_CPULIMIT
 #ifdef __linux__
 
 #include "process_iterator_linux.c"
@@ -46,4 +46,5 @@
 
 #error Platform not supported
 
+#endif
 #endif

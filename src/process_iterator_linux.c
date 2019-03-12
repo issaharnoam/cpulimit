@@ -20,6 +20,13 @@
  */
 
 #include <sys/vfs.h>
+#ifdef VS_CPULIMIT 
+#include <stdio.h>
+#include <time.h>
+#include <dirent.h>
+#include <string.h> 
+#include "process_iterator.h"
+#endif
 
 static int get_boot_time()
 {
